@@ -1,45 +1,42 @@
 import { useState } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { HomeLayout, Landing, About, Newsletter, Error, Dish } from './pages'
-
+import { HomeLayout, Landing, About, Newsletter, Error, Dish, HomePage } from './pages'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <HomeLayout />,
+    children: [
+      {
+        path: 'homepage',
+        element: <HomePage/>,
+      },
+      {
+        path: 'about',
+        element: <About />,
+      },
+      {
+        path: 'newsletter',
+        element: <Newsletter />,
+      },
+      {
+        path: 'error',
+        element: <Error />,
+      },
+      {
+        path: 'dish',
+        element: <Dish />,
+      },
+    ],
   },
   {
-    path: '/Landing',
+    index: true,
     element: <Landing />,
-  },
-  {
-    path: '/About',
-    element: <About />,
-  },
-  {
-    path: '/Newsletter',
-    element: <Newsletter />,
-  },
-  {
-    path: '/Error',
-    element: <Error />,
-  },
-  {
-    path: '/Dish',
-    element: <Dish />,
   },
 ])
 
-
-
-
-
-
-const App = ()=>{
-
-  return (
-    <RouterProvider router={router}/>
-  )
+const App = () => {
+  return <RouterProvider router={router} />
 }
 
 export default App
