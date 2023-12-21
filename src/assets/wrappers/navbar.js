@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 
-export const Wrapper = styled.nav`
+const Wrapper = styled.nav`
   background: var(--white);
   .nav-center {
     width: var(--view-width);
@@ -32,6 +32,9 @@ export const Wrapper = styled.nav`
   .nav-link:hover {
     color: var(--primary-500);
   }
+  .nav-btn {
+    padding: 0.4rem 0.75rem;
+  }
   .active {
     color: var(--primary-500);
   }
@@ -44,8 +47,9 @@ export const Wrapper = styled.nav`
     .nav-links {
       flex-direction: row;
       margin-top: 0;
+      align-items: center;
     }
   }
-`;
+`
   
-
+export default Wrapper
