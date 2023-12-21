@@ -1,15 +1,18 @@
 import { useState } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { HomeLayout, Landing, About, Newsletter, Error, Dish, HomePage } from './pages'
+import { loader as HomeLoader } from './pages/HomePage'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <HomeLayout />,
+    errorElement:<Error/>,
     children: [
       {
         path: 'homepage',
         element: <HomePage/>,
+        loader:HomeLoader
       },
       {
         path: 'about',
@@ -24,7 +27,7 @@ const router = createBrowserRouter([
         element: <Error />,
       },
       {
-        path: 'dish',
+        path: 'dish/:id',
         element: <Dish />,
       },
     ],

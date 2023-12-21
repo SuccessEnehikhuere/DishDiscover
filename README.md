@@ -8,4 +8,4 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 
-url = https://www.themealdb.com/api/json/v1/1/search.php?s=fish
+url = 'https://www.themealdb.com/api/json/v1/1/search.php?s='
