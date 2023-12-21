@@ -1,10 +1,12 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { Wrapper } from '../assets/wrappers/navbar'
+import styled from 'styled-components'
 
 
 const Navbar = () => {
   return (
-    <nav>
+    <Wrapper>
       <div className="nav-center">
         <span className="logo">DishDiscover</span>
         <div className="nav-links">
@@ -18,14 +20,17 @@ const Navbar = () => {
             Newsletter
           </NavLink>
           <NavLink to="/" className="nav-link">
-            <button>
+            <button className='btn'>
               Sign out
             </button>
           </NavLink>
         </div>
       </div>
-    </nav>
+    </Wrapper>
   )
 }
+
+
+
 
 export default Navbar
