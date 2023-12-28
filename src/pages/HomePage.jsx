@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState } from 'react'
 import { useLoaderData } from 'react-router-dom'
 import axios from 'axios'
 import MealList from '../components/MealList'
@@ -11,13 +12,18 @@ export const loader = async()=>{
   
   return {meals:response.data.meals, searchTerm}
 }
+
+
 const HomePage = () => {
-  const {meals, searchTerm} = useLoaderData()
-  console.log(meals);
+  const { meals, searchTerm } = useLoaderData()
+  const [loading, isLoading] = useState(true)
+  console.log(meals)
+  
+ 
 
   return (
     <>
-     <MealList meals={meals}/>
+      <MealList meals={meals} />
     </>
   )
 }
