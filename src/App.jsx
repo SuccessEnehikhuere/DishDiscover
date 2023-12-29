@@ -2,19 +2,19 @@ import { useState } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { HomeLayout, Landing, About, Newsletter, Error, Dish, HomePage, SinglePageError } from './pages'
 import { loader as HomeLoader } from './pages/HomePage'
+import { loader as SingleDishLoader } from './pages/Dish'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <HomeLayout />,
-    errorElement:<Error/>,
+    errorElement: <Error />,
     children: [
       {
         path: 'homepage',
-        element: <HomePage/>,
-        loader:HomeLoader,
-        errorElement: <SinglePageError/>
-       
+        element: <HomePage />,
+        loader: HomeLoader,
+        errorElement: <SinglePageError />,
       },
       {
         path: 'about',
@@ -31,6 +31,7 @@ const router = createBrowserRouter([
       {
         path: 'dish/:id',
         element: <Dish />,
+        loader: SingleDishLoader,
       },
     ],
   },

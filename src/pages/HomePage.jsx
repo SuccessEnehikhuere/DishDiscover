@@ -16,11 +16,7 @@ export const loader = async()=>{
 
 const HomePage = () => {
   const { meals, searchTerm } = useLoaderData()
-  const [loading, isLoading] = useState(true)
-  console.log(meals)
-  
  
-
   return (
     <>
       <MealList meals={meals} />
