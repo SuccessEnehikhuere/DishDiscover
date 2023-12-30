@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { HomeLayout, Landing, About, Newsletter, Error, Dish, HomePage, SinglePageError } from './pages'
 import { loader as HomeLoader } from './pages/HomePage'
 import { loader as SingleDishLoader } from './pages/Dish'
+import {action as SingleDishAction} from './pages/Newsletter'
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
       {
         path: 'newsletter',
         element: <Newsletter />,
+        action:SingleDishAction,
       },
       {
         path: 'error',
