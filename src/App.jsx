@@ -4,6 +4,15 @@ import { HomeLayout, Landing, About, Newsletter, Error, Dish, HomePage, SinglePa
 import { loader as HomeLoader } from './pages/HomePage'
 import { loader as SingleDishLoader } from './pages/Dish'
 import {action as SingleDishAction} from './pages/Newsletter'
+import { QueryClient, QueryClientProvider} from '@tanstack/react-query'
+
+const queryClient = new QueryClient({
+  defaultOptions:{
+    queries:{
+      staleTime:1000 * 60 *5
+    }
+  }
+})
 
 const router = createBrowserRouter([
   {
@@ -14,7 +23,7 @@ const router = createBrowserRouter([
       {
         path: 'homepage',
         element: <HomePage />,
-        loader: HomeLoader,
+        loader: HomeLoader(queryClient),
         errorElement: <SinglePageError />,
       },
       {
@@ -44,7 +53,13 @@ const router = createBrowserRouter([
 ])
 
 const App = () => {
-  return <RouterProvider router={router} />
+  return (
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+    </QueryClientProvider>
+    
+  )
+  
 }
 
 export default App

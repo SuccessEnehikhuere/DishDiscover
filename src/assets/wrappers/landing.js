@@ -10,14 +10,14 @@ const Wrapper = styled.main`
   max-width: var(--max-width);
   margin: 0 auto;
   height: 100vh;
-  background-image: url(${import.meta.env.BASE_URL}images/food.svg);
+  background-image: url(${import.meta.env.BASE_URL}images/tea.svg);
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
   // position:fixed;
 
-  background-color: rgba(0, 0, 0, 0.6);
-  background-blend-mode: color;
+  // background-color: rgba(0, 0, 0, 0.6);
+  // background-blend-mode: color;
   // position:fixed;
    @media(min-width:768px){
     background-size:80%
@@ -39,10 +39,7 @@ const Wrapper = styled.main`
     font-weight: 700;
     letter-spacing: 2px;
   }
- 
-    
-  }
-`
+ `
 
 
 export default Wrapper
