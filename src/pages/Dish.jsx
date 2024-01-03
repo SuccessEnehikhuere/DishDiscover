@@ -2,29 +2,38 @@ import React from 'react'
 import { useLoaderData, Link } from 'react-router-dom'
 import axios from 'axios'
 import Wrapper from '../assets/wrappers/dish'
-
+import { useQuery } from '@tanstack/react-query'
 
 const singleDishlUrl = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i='
 
-export const loader = async({params})=>{
+const searchSingleMealQuery = (id)=>{
+  return{
+    queryKey:['meal', id],
+    queryFn: async()=>{
+      const {data} = await axios.get(`${singleDishlUrl}${id}`)
+      return data
+    }
+  }
+}
+
+export const loader = (queryClient) => async({params})=>{
   const {id} = params
-  const response = await axios.get(`${singleDishlUrl}${id}`)
-
- return {data:response.data, id}
-
+  await queryClient.ensureQueryData(searchSingleMealQuery(id))
+  return {id}
 }
 
 const Dish = () => {
- const {data, id}= useLoaderData()
- const singleDish = data.meals[0]
-  console.log(singleDish);
+ const {id}= useLoaderData()
+ 
+ const {data} = useQuery(searchSingleMealQuery(id))
+ if(!data) return <Navigate to ='/homepage'/>
+
+ const singleDish = data.meals[0];
+
 
  const {strMeal:name, strMealThumb:image, strCategory:info, strArea:country, strInstructions:instructions } = singleDish
 
  const mainIngredients = Object.keys(singleDish).filter((key)=>key.startsWith('strIngredient') && singleDish[key]!=='').map((key)=>singleDish[key])
-
- console.log(mainIngredients)
-
 
 
   return (
