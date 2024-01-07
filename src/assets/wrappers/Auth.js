@@ -101,6 +101,7 @@ const Wrapper = styled.main`
     background: var(--primary-900);
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
+    object-position:center;
   }
 
   @media (min-width: 768px) {

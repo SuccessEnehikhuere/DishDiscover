@@ -36,7 +36,7 @@ const Auth = () => {
             <p className="password-text">forget password?</p>
             <p className="welcome-text">
               New to Dish<span>Discover?</span>
-              <Link to="/">Sign up</Link>
+              <Link to="/signup">Sign up</Link>
             </p>
 
             <button
@@ -50,7 +50,7 @@ const Auth = () => {
         </div>
 
         <div className="main-img">
-          <img src="/images/sushi.png" className="img" />
+          <img src="/images/pumpkin.svg" className="img" />
         </div>
       </div>
     </Wrapper>

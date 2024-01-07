@@ -7,4 +7,5 @@ export { default as Newsletter } from './Newsletter'
 export { default as HomePage } from './HomePage'
 export { default as SinglePageError } from './SinglePageError'
 export { default as AuthPage } from './AuthPage'
+export { default as SignupPage } from './SignupPage'
 

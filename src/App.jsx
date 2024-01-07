@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { HomeLayout, Landing, About, Newsletter, Error, Dish, HomePage, SinglePageError, AuthPage} from './pages'
+import { HomeLayout, Landing, About, Newsletter, Error, Dish, HomePage, SinglePageError, AuthPage, SignupPage} from './pages'
 import { loader as HomeLoader } from './pages/HomePage'
 import { loader as SingleDishLoader } from './pages/Dish'
 import {action as SingleDishAction} from './pages/Newsletter'
@@ -54,6 +54,10 @@ const router = createBrowserRouter([
   {
     path: 'auth',
     element: <AuthPage />,
+  },
+  {
+    path: 'signup',
+    element: <SignupPage />,
   },
 ])
 
