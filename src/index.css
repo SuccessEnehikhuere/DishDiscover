@@ -23,6 +23,10 @@ html {
   --primary-700: #047857;
   --primary-800: #065f46;
   --primary-900: #064e3b;
+  --primary-1000:#58745E;
+
+  /*emerald*/
+  --emerald-100:#d1fae5;
 
   /* grey */
   --grey-50: #f8fafc;
@@ -39,6 +43,7 @@ html {
   --black: #222;
   --white: #fff;
   --red-light: #f8d7da;
+  --red-brown:#F5DBC4;
   --red-dark: #842029;
   --green-light: #d1e7dd;
   --green-dark: #0f5132;
@@ -71,6 +76,7 @@ body {
   font-weight: 400;
   line-height: 1;
   color: var(--textColor);
+   box-sizing: border-box;
 }
 p {
   margin: 0;

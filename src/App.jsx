@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { HomeLayout, Landing, About, Newsletter, Error, Dish, HomePage, SinglePageError } from './pages'
+import { HomeLayout, Landing, About, Newsletter, Error, Dish, HomePage, SinglePageError, AuthPage} from './pages'
 import { loader as HomeLoader } from './pages/HomePage'
 import { loader as SingleDishLoader } from './pages/Dish'
 import {action as SingleDishAction} from './pages/Newsletter'
@@ -26,6 +26,7 @@ const router = createBrowserRouter([
         loader: HomeLoader(queryClient),
         errorElement: <SinglePageError />,
       },
+
       {
         path: 'about',
         element: <About />,
@@ -33,7 +34,7 @@ const router = createBrowserRouter([
       {
         path: 'newsletter',
         element: <Newsletter />,
-        action:SingleDishAction,
+        action: SingleDishAction,
       },
       {
         path: 'error',
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
   {
     index: true,
     element: <Landing />,
+  },
+  {
+    path: 'auth',
+    element: <AuthPage />,
   },
 ])
 
