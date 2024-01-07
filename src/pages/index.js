@@ -6,4 +6,5 @@ export { default as Landing } from './Landing'
 export { default as Newsletter } from './Newsletter'
 export { default as HomePage } from './HomePage'
 export { default as SinglePageError } from './SinglePageError'
+export { default as AuthPage } from './AuthPage'
 
