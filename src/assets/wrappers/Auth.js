@@ -25,7 +25,8 @@ const Wrapper = styled.main`
 
   .heading-text {
     font-size: clamp(1.2rem, 8vw, 5rem);
-    font-weight: 700;
+    font-weight: 400;
+    font-family:italiano;
     letter-spacing: 2px;
     font-weight: 700;
     letter-spacing: 2px;
@@ -95,28 +96,10 @@ const Wrapper = styled.main`
     color:white;
   }
 
-  .main-img {
-    display: none;
-    /* width: var(--view-width); */
-    background: var(--primary-900);
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    object-position:center;
-  }
+  
 
   @media (min-width: 768px) {
-    .auth-page {
-      /* max-width: var(--max-width);  */
-      width: var(--view-width);
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      margin: 2rem auto;
-      background: var(--grey-100);
-      box-sizing: border-box;
-    }
-    .main-img {
-      display: block;
-    }
+   
     .heading-text {
       font-size: clamp(1.2rem, 7vw, 3rem);
     }

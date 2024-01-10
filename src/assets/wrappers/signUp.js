@@ -1,5 +1,31 @@
 import styled from 'styled-components'
 const Wrapper = styled.main`
+  .form-heading {
+    display: flex;
+    button {
+      background: transparent;
+      border: none;
+      margin: auto 0;
+      padding-bottom: 1.5rem;
+      color: black;
+    }
+  }
+  .icon-link {
+    color: var(--black);
+  }
+
+  .heading-text {
+    font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+    padding-bottom: 1.5rem;
+    /* padding-left: 2rem; */
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+
+  .icon {
+    font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+  }
+
   .form-text {
     color: var(--grey-500);
     text-align: center;
@@ -7,13 +33,10 @@ const Wrapper = styled.main`
 
     span {
       color: var(--primary-500);
-      font-weight:500;
+      font-weight: 500;
     }
   }
-  .form-heading {
-    font-size: clamp(1.25rem, 1.5vw, 1.5rem);
-    padding-bottom:1rem;
-  }
+
   input,
   button {
     margin-bottom: 1rem;

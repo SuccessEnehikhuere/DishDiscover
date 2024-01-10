@@ -1,22 +1,26 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Wrapper from '../assets/wrappers/signUp'
+import { FaArrowLeft } from 'react-icons/fa'
 
 const SignupPage = () => {
   return (
     <Wrapper>
       <form className="form">
-        <h2 className='form-heading'>lets get started</h2>
+        <div className="form-heading">
+          <button>
+            <Link to="/auth" className="icon-link">
+              <FaArrowLeft />
+            </Link>
+          </button>
+
+          <h2 className="heading-text">lets get started</h2>
+        </div>
 
         <label htmlFor="Name" className="form-label">
           Name
         </label>
-        <input
-          type="text"
-          id="Name"
-          defaultValue="john"
-          className="form-input"
-        />
+        <input type="text" id="Name" className="form-input" required />
 
         <label htmlFor="Email Address " className="form-label">
           Email Address
@@ -24,19 +28,14 @@ const SignupPage = () => {
         <input
           type="email"
           id="Email Address"
-          defaultValue="johndoe@gmail.com"
+          required
           className="form-input"
         />
 
         <label htmlFor="Password" className="form-label">
           Password
         </label>
-        <input
-          type="password"
-          id="Password"
-          defaultValue="....."
-          className="form-input"
-        />
+        <input type="password" id="Password" required className="form-input" />
 
         <label htmlFor="Mobile Phone" className="form-label">
           Mobile Phone
@@ -44,8 +43,9 @@ const SignupPage = () => {
         <input
           type="tel"
           id="Mobile Phone"
-          defaultValue="+234"
+          // required
           className="form-input"
+          // pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
         />
 
         <button className="btn btn-block">

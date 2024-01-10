@@ -4,7 +4,11 @@ import { Link, useNavigation } from 'react-router-dom'
 const Auth = () => {
   const navigation = useNavigation()
   const isLoading = navigation.state === 'loading'
-  console.log(navigation);
+  // 
+  
+  
+
+
   return (
     <Wrapper>
       <div className="auth-page">
@@ -49,9 +53,11 @@ const Auth = () => {
           </form>
         </div>
 
-        <div className="main-img">
+
+
+        {/* <div className="main-img">
           <img src="/images/pumpkin.svg" className="img" />
-        </div>
+        </div> */}
       </div>
     </Wrapper>
   )
