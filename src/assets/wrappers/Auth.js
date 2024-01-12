@@ -24,10 +24,8 @@ const Wrapper = styled.main`
   }
 
   .heading-text {
-    font-size: clamp(1.2rem, 8vw, 5rem);
-    font-weight: 400;
+    font-size: clamp(1rem, 5vw, 4rem);
     font-family:italiano;
-    letter-spacing: 2px;
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: capitalize;
@@ -43,7 +41,7 @@ const Wrapper = styled.main`
     line-height: 2;
     margin-top: 0.5rem;
     font-family: Inter;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 400;
     line-height: 150%;
     font-family: inter;
@@ -53,7 +51,7 @@ const Wrapper = styled.main`
   form {
     /* padding:0; */
     width: 100%;
-    max-width: var(--fixed-width);
+    max-width: var(--max-width);
     /* background: var(--white); */
     /* border-radius: var(--borderRadius); */
     /* box-shadow: var(--shadow-2); */
@@ -61,19 +59,13 @@ const Wrapper = styled.main`
     margin: 3rem auto;
     box-sizing: border-box;
   }
+
   .form-input {
     padding: 1rem 1.5rem;
     box-sizing: border-box;
     margin-top: 1rem;
   }
 
-  .password-text {
-    text-align: right;
-    padding-top: 1rem;
-    font-size: 1rem;
-    color: var(--grey-400);
-    font-family: inter;
-  }
 
   .welcome-text {
     text-align: center;
@@ -88,10 +80,33 @@ const Wrapper = styled.main`
 
   .btn-block {
     border-radius: 2rem;
-    padding-top: 1.2rem;
-    padding-bottom: 1.2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 
   }
+
+
+  .input-container{
+   position: relative;
+  }
+
+  .icon-container{
+    position:absolute;
+    bottom:0;
+    right:1rem;
+    top:6rem;
+  }
+
+  .eye-icon{
+    color:black;
+    font-size:1rem;
+  }
+
+  .icon-btn{
+    background:transparent;
+    border:none;
+  }
+  
   a{
     color:white;
   }
@@ -108,6 +123,7 @@ const Wrapper = styled.main`
     .heading-text {
       font-size: clamp(1.2rem, 8vw, 4rem);
     }
+   
   }
 `
 

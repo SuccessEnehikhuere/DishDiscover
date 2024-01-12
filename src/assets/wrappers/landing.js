@@ -3,14 +3,11 @@ const Wrapper = styled.main`
   background: #1a3830;
   margin: auto 0;
   box-sizing: border-box;
-  /* width:90vw; */
   display: flex;
   justify-content: center;
   align-items: center;
   max-height: 100%;
   min-height: 100vh;
-  /* padding-top: 1rem; */
-  /* padding-left: 3rem; */
 
   .main-center {
     display: flex;
@@ -164,8 +161,7 @@ const Wrapper = styled.main`
     max-height: 350px;
     flex-shrink: 0;
     padding-top: 1rem;
-    /* width: 250px;
-    height: 250px; */
+   
   }
 
   p {
@@ -209,6 +205,7 @@ const Wrapper = styled.main`
     padding: 0.5rem 1rem;
     flex-shrink: 0;
     border-radius: 40px;
+    border:none;
     background:   var(--primary-500);
     color: #020407;
     font-family: Istok Web;

@@ -1,9 +1,50 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Wrapper from '../assets/wrappers/signUp'
 import { FaArrowLeft } from 'react-icons/fa'
-
+import { useState } from 'react'
+import { toast } from 'react-toastify'
 const SignupPage = () => {
+ const [registrationData, setRegistrationData] = useState({
+   name:'',
+   email:'',
+   password:'',
+   tel:''
+ })
+
+const navigate = useNavigate();
+const handleRegistration = (e) => {
+  e.preventDefault() 
+  if(
+    registrationData.name === '' &&
+    registrationData.email === '' &&
+    registrationData.password === '' &&
+    registrationData.tel === ''
+    ){
+      toast.error('input fields are empty!')
+      return;
+    }
+  if (
+    registrationData &&
+    registrationData.name &&
+    registrationData.email &&
+    registrationData.password &&
+    registrationData.tel
+  ) {
+    localStorage.setItem('userDetails', JSON.stringify(registrationData))
+
+    toast.success('User registered successfully!')
+    navigate('/auth')
+   
+  } else {
+    toast.error('Invalid registration data')
+    return;
+  }
+}
+
+
+
+
   return (
     <Wrapper>
       <form className="form">
@@ -20,13 +61,21 @@ const SignupPage = () => {
         <label htmlFor="Name" className="form-label">
           Name
         </label>
-        <input type="text" id="Name" className="form-input" required />
+        <input
+          type="text"
+          value={registrationData.name}
+          onChange={(e)=>setRegistrationData({...registrationData, name: e.target.value})}
+          id="Name" 
+          className="form-input" 
+          required />
 
         <label htmlFor="Email Address " className="form-label">
           Email Address
         </label>
         <input
           type="email"
+          value={registrationData.email}
+          onChange={(e)=>setRegistrationData({...registrationData, email: e.target.value})}
           id="Email Address"
           required
           className="form-input"
@@ -35,21 +84,29 @@ const SignupPage = () => {
         <label htmlFor="Password" className="form-label">
           Password
         </label>
-        <input type="password" id="Password" required className="form-input" />
+        <input
+         type="password" 
+         value={registrationData.password}
+         onChange={(e)=>setRegistrationData({...registrationData, password:e.target.value})}
+         id="Password" 
+         required 
+         className="form-input" />
 
-        <label htmlFor="Mobile Phone" className="form-label">
-          Mobile Phone
+        <label htmlFor="tel-number" className="form-label">
+          tel-number
         </label>
         <input
           type="tel"
-          id="Mobile Phone"
+          value={registrationData.tel}
+          onChange={(e)=>setRegistrationData({...registrationData, tel:e.target.value})}
+          id="tel-number"
           // required
           className="form-input"
           // pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
         />
 
-        <button className="btn btn-block">
-          <Link to="/auth">Create Account</Link>
+        <button className="btn btn-block" onClick={handleRegistration}>
+          Create Account
         </button>
 
         <p className="form-text">
