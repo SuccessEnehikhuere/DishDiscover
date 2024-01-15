@@ -210,13 +210,14 @@ ul {
 /* form */
 
 .form {
-  width: 100%;
+  /* width: 100%; */
   max-width: var(--fixed-width);
   background: var(--white);
   border-radius: var(--borderRadius);
   box-shadow: var(--shadow-2);
   padding: 2rem 2.5rem;
   margin: 3rem auto;
+  box-sizing: border-box;
 }
 .form-label {
   display: block;
@@ -283,7 +284,7 @@ ul {
 /* ============= PROJECT CSS ===============*/
 
 .page{
-  width:var(--view-width);
+  /* width:var(--view-width); */
   max-width:var(--max-width);
   margin: 0 auto;
   padding: 5rem 2rem;

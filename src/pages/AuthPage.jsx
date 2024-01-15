@@ -48,25 +48,21 @@ const Auth = () => {
    try {
      e.preventDefault()
      setIsLoading(true)
-
-     if (isDataAvailable && storedUserDetails && signInData) {
-    
-       
-       if (
-        storedUserDetails.password === signInData.password &&
-        storedUserDetails.email === signInData.email
-       ) {
-      
-         navigate('/homepage')
-         toast.success('user signed-in successfully!')
-
+     
+       if (isDataAvailable && storedUserDetails && signInData) {
+         if (
+           storedUserDetails.password === signInData.password &&
+           storedUserDetails.email === signInData.email
+         ) {
+           navigate('/homepage')
+           toast.success('user signed-in successfully!')
+         } else {
+           toast.error('User not found!.please click on sign-up to register')
+           return
+         }
        } else {
-         toast.error('User not found!')
-         return;
+         console.error('Stored user data or sign-in data is undefined')
        }
-     } else {
-       console.error('Stored user data or sign-in data is undefined')
-     }
 
    } catch (error) {
      console.error('Error in handleSignIn:', error)
@@ -129,8 +125,8 @@ const Auth = () => {
               </div>
   
               <p className="welcome-text">
-                New to Dish<span>Discover?</span>
-                <Link to="/signup">Sign up</Link>
+                New to Dish Discover?
+                <Link to="/signup"> <span>Sign up</span></Link>
               </p>
 
               <button

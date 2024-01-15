@@ -1,17 +1,30 @@
 import { useState } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { HomeLayout, Landing, About, Newsletter, Error, Dish, HomePage, SinglePageError, AuthPage, SignupPage} from './pages'
+import {
+  HomeLayout,
+  Landing,
+  About,
+  Newsletter,
+  Error,
+  Dish,
+  HomePage,
+  SinglePageError,
+  AuthPage,
+  SignupPage,
+} from './pages'
 import { loader as HomeLoader } from './pages/HomePage'
 import { loader as SingleDishLoader } from './pages/Dish'
-import {action as SingleDishAction} from './pages/Newsletter'
-import { QueryClient, QueryClientProvider} from '@tanstack/react-query'
+import { action as SingleDishAction } from './pages/Newsletter'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+
+import { useGlobalContext } from './components/Context'
 
 const queryClient = new QueryClient({
-  defaultOptions:{
-    queries:{
-      staleTime:1000 * 60 * 5
-    }
-  }
+  defaultOptions: {
+    queries: {
+      staleTime: 1000 * 60 * 5,
+    },
+  },
 })
 
 const router = createBrowserRouter([
@@ -62,13 +75,12 @@ const router = createBrowserRouter([
 ])
 
 const App = () => {
+  
   return (
     <QueryClientProvider client={queryClient}>
       <RouterProvider router={router} />
     </QueryClientProvider>
-    
   )
-  
 }
 
 export default App

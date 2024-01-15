@@ -1,9 +1,11 @@
 import styled from 'styled-components'
 const Wrapper = styled.main`
   margin-bottom: 6rem;
+  
   .form {
     display: grid;
     grid-template-columns: 1fr auto;
+   
   }
   .form-input {
     border-top-right-radius: 0;

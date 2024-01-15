@@ -25,16 +25,19 @@ const Wrapper = styled.main`
 
   .heading-text {
     font-size: clamp(1rem, 5vw, 4rem);
-    font-family:italiano;
+    font-family: italiano;
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: capitalize;
     text-align: center;
     padding-top: 2rem;
+
+
   }
 
   span {
     color: var(--primary-600);
+    font-weight:700;
   }
 
   .form-text {
@@ -66,15 +69,14 @@ const Wrapper = styled.main`
     margin-top: 1rem;
   }
 
-
   .welcome-text {
     text-align: center;
     padding-top: 2rem;
     padding-bottom: 4rem;
     font-size: 1.2rem;
     font-family: inter;
-    a{
-      color:black;
+    a {
+      color: black;
     }
   }
 
@@ -82,39 +84,34 @@ const Wrapper = styled.main`
     border-radius: 2rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-
   }
 
-
-  .input-container{
-   position: relative;
+  .input-container {
+    position: relative;
   }
 
-  .icon-container{
-    position:absolute;
-    bottom:0;
-    right:1rem;
-    top:6rem;
+  .icon-container {
+    position: absolute;
+    bottom: 0;
+    right: 1rem;
+    top: 6rem;
   }
 
-  .eye-icon{
-    color:black;
-    font-size:1rem;
+  .eye-icon {
+    color: black;
+    font-size: 1rem;
   }
 
-  .icon-btn{
-    background:transparent;
-    border:none;
-  }
-  
-  a{
-    color:white;
+  .icon-btn {
+    background: transparent;
+    border: none;
   }
 
-  
+  a {
+    color: white;
+  }
 
   @media (min-width: 768px) {
-   
     .heading-text {
       font-size: clamp(1.2rem, 7vw, 3rem);
     }
@@ -123,7 +120,6 @@ const Wrapper = styled.main`
     .heading-text {
       font-size: clamp(1.2rem, 8vw, 4rem);
     }
-   
   }
 `
 

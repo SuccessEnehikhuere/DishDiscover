@@ -33,20 +33,9 @@ const Landing = () => {
 
           <div className="main-center">
             <div className="nav-bar">
-              <div className="star-icon">
-                <div className="star-circle">
-                  <img src={icon7} className="star" />
-                </div>
-              </div>
-
               <div>
-                <h2 className="heading-text">dish discover</h2>
+                <h2 className="heading-text">dishDiscover</h2>
                 <div className="title-underline" />
-              </div>
-
-              <div className="circle">
-                <div className="dark-circle" />
-                <div className="lemon-circle" />
               </div>
             </div>
 

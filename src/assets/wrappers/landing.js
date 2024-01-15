@@ -69,71 +69,14 @@ const Wrapper = styled.main`
     display: flex;
     align-items: center;
     justify-content: center;
-
-    .star-icon {
-      max-width: 90px;
-      max-height: 90px;
-      min-width: 60px;
-      min-height: 60px;
-      flex-shrink: 0;
-      border-radius: 20px;
-      background: rgba(38, 71, 62, 0.57);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      .star-circle {
-        max-width: 50px;
-        max-height: 50px;
-        min-width: 20px;
-        min-height: 20px;
-        flex-shrink: 0;
-        background: #6a7442;
-        border-radius: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    }
     .heading-text {
-      font-size: clamp(1.2rem, 8vw, 4rem);
       font-weight: 700;
       letter-spacing: 2px;
-      font-weight: 400;
-      letter-spacing: 2px;
-      text-transform: capitalize;
       text-align: center;
-      font-family: 'Italianno', cursive;
-      color: white;
-      padding-left: 0.5rem;
-      padding-right: 0.5rem;
       display: flex;
       flex-wrap: wrap;
-    }
-
-    .circle {
-      position: relative;
-      .dark-circle {
-        max-width: 100px;
-        max-height: 100px;
-        min-width: 40px;
-        min-height: 40px;
-        flex-shrink: 0;
-        background: #100f0f;
-        border-radius: 100%;
-      }
-      .lemon-circle {
-        max-width: 20px;
-        max-height: 20px;
-        min-width: 12px;
-        min-height: 12px;
-        flex-shrink: 0;
-        background:  var(--primary-500);fd85d;
-        position: absolute;
-        border-radius: 100%;
-        top: 0;
-        right: 0.5rem;
-      }
+      font-size: clamp(2rem, 4vw, 4rem);
+      color: var(--primary-500);
     }
   }
 
@@ -156,18 +99,17 @@ const Wrapper = styled.main`
   }
   .main-img {
     width: 150px;
-    height: 150px;
+    height: 160px;
     max-width: 350px;
     max-height: 350px;
     flex-shrink: 0;
     padding-top: 1rem;
-   
   }
 
   p {
     color: #508879;
     font-family: Inter;
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .caloryIcon {
@@ -196,23 +138,27 @@ const Wrapper = styled.main`
     font-family: Istok Web;
     display: flex;
     flex-wrap: wrap;
-    /* font-size: clamp(1rem, 1.5vw, 2rem); */
+    font-size: clamp(1rem, 2vw, 2rem);
     font-weight: 400;
     text-align: center;
   }
+
   button {
     /* padding: 1rem 3rem; */
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.5rem;
     flex-shrink: 0;
     border-radius: 40px;
-    border:none;
-    background:   var(--primary-500);
+    border: none;
+    background: var(--primary-500);
     color: #020407;
     font-family: Istok Web;
     /* font-size: 2rem; */
     font-size: clamp(1rem, 2vw, 2rem);
     font-weight: 400;
-    margin-top: 2rem;
+    margin-top: 3rem;
+    a {
+      color: black;
+    }
   }
 
   //second side-bar styles
@@ -241,6 +187,7 @@ const Wrapper = styled.main`
     }
   }
 
+
   @media (min-width: 768px) {
     .sidebar {
       display: flex;
@@ -252,33 +199,8 @@ const Wrapper = styled.main`
       /* padding-top: 3rem; */
     }
 
-    .nav-bar {
-      .star-icon {
-        max-width: 150px;
-        max-height: 150px;
-        min-width: 100px;
-        min-height: 100px;
-      }
-
-      .circle {
-        position: relative;
-        .dark-circle {
-          max-width: 120px;
-          max-height: 120px;
-          min-width: 80px;
-          min-height: 80px;
-        }
-        .lemon-circle {
-          max-width: 30px;
-          max-height: 30px;
-          min-width: 15px;
-          min-height: 15px;
-        }
-      }
-    }
-
     .img-center {
-      /* padding: 3rem 0.5rem 3rem 3rem; */
+      padding: 3rem 0.5rem 3rem 3rem;
     }
     .main-img {
       width: 200px;
@@ -320,7 +242,7 @@ const Wrapper = styled.main`
     }
   }
 
-  @media (min-width: 1140px) and (max-width:2560px){
+  @media (min-width: 1140px) and (max-width: 2560px) {
     .sidebar {
       max-width: 150px;
       max-height: 800px;
@@ -361,6 +283,5 @@ const Wrapper = styled.main`
       padding-top: 1rem;
     }
   }
-
 `
 export default Wrapper
