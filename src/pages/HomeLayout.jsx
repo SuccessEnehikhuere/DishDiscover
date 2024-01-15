@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { Outlet, useNavigation } from 'react-router-dom'
 import Navbar from '../components/Navbar'
-import { useGlobalContext } from '../components/Context'
-import SideBar from '../components/sidebar'
+
+
 
 const HomeLayout = () => {
  const navigation = useNavigation()
