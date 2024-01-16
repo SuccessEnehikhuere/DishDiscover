@@ -12,7 +12,6 @@ const HomeLayout = () => {
 
   return (
     <>
-       {/* <SideBar/> */}
         <Navbar />
         <section className='page'>
           {isPageLoading? <div className='loading'/> : <Outlet/>}

@@ -4,7 +4,8 @@ import Wrapper from '../assets/wrappers/navbar'
 import { FaBars } from 'react-icons/fa'
 import { useState } from 'react'
 import { useGlobalContext } from './Context'
-import SideBar from '../components/sidebar'
+import Linksbar from './Linksbar'
+
 
 const Navbar = () => {
   const { isSidebarOpen, openSideBar } = useGlobalContext()
@@ -33,7 +34,7 @@ const Navbar = () => {
 
         {/* hambuger jsx */}
         {isSidebarOpen ? (
-          <SideBar />
+          <Linksbar/>
         ) : (
           <div className="sidebar-menu">
             <span className="logo">DishDiscover</span>

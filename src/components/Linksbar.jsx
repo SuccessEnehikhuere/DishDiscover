@@ -1,20 +1,20 @@
 import React from 'react'
 import { FaTimes } from 'react-icons/fa'
-import Wrapper from '../assets/wrappers/sidebar'
+import Wrapper from '../assets/wrappers/linksbar'
 import { useGlobalContext } from './Context'
 import { NavLink } from 'react-router-dom'
 
-const SideBar = () => {
-  const { isSidebarClose, closeSideBar } = useGlobalContext()
+const Linksbar = () => {
+  const { isSideBarOpen, closeSideBar } = useGlobalContext()
   return (
     <Wrapper>
+      
       <div className="side-bar">
-        <div className='sidebar-header'>
+        <div className="sidebar-header">
           <span className="logo">DishDiscover</span>
-          
-          <div className="sidebar-menu">
 
-            <button onClick={closeSideBar} className='close-btn'>
+          <div className="sidebar-menu">
+            <button onClick={closeSideBar} className="close-btn">
               <FaTimes />
             </button>
           </div>
@@ -41,4 +41,4 @@ const SideBar = () => {
   )
 }
 
-export default SideBar
+export default Linksbar
